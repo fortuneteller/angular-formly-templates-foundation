@@ -122,13 +122,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    formlyConfigProvider.setWrapper([{
 	      name: "templateLabel",
 	      template: __webpack_require__(17),
-	      apiCheck: {
-	        templateOptions: c.shape({
-	          label: c.string,
-	          required: c.bool.optional
-	        })
-	      },
-	      apiCheckInstance: c
 	    }, { name: "templateHasError", template: __webpack_require__(18) }]);
 	  }
 	  addWrappers.$inject = ["formlyConfigProvider", "formlyFoundationApiCheck"];
@@ -192,13 +185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    formlyConfigProvider.setType({
 	      name: "checkbox",
 	      template: __webpack_require__(19),
-	      wrapper: ["templateHasError"],
-	      apiCheck: {
-	        templateOptions: c.shape({
-	          label: c.string
-	        })
-	      },
-	      apiCheckInstance: c
+	      wrapper: ["templateHasError"]
 	    });
 	  }
 	  addCheckboxType.$inject = ["formlyConfigProvider", "formlyFoundationApiCheck"];
@@ -222,14 +209,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      defaultOptions: {
 	        noFormControl: false
 	      },
-	      apiCheck: {
-	        templateOptions: c.shape({
-	          options: c.arrayOf(c.object),
-	          labelProp: c.string.optional,
-	          valueProp: c.string.optional
-	        })
-	      },
-	      apiCheckInstance: c,
+
 	      controller: /* @ngInject */["$scope", function controller($scope) {
 	        var to = $scope.to;
 	        var opts = $scope.options;
@@ -302,15 +282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      wrapper: ["templateLabel", "templateHasError"],
 	      defaultOptions: {
 	        noFormControl: false
-	      },
-	      apiCheck: {
-	        templateOptions: c.shape({
-	          options: c.arrayOf(c.object),
-	          labelProp: c.string.optional,
-	          valueProp: c.string.optional
-	        })
-	      },
-	      apiCheckInstance: c
+	      }
 	    });
 	  }
 	  addRadioType.$inject = ["formlyConfigProvider", "formlyFoundationApiCheck"];
@@ -330,16 +302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    formlyConfigProvider.setType({
 	      name: "select",
 	      template: __webpack_require__(22),
-	      wrapper: ["templateLabel", "templateHasError"],
-	      apiCheck: {
-	        templateOptions: c.shape({
-	          options: c.arrayOf(c.object),
-	          labelProp: c.string.optional,
-	          valueProp: c.string.optional,
-	          groupProp: c.string.optional
-	        })
-	      },
-	      apiCheckInstance: c
+	      wrapper: ["templateLabel", "templateHasError"]
 	    });
 	  }
 	  addSelectType.$inject = ["formlyConfigProvider", "formlyFoundationApiCheck"];
@@ -366,13 +329,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	          cols: { attribute: "cols" }
 	        }
 	      },
-	      apiCheck: {
-	        templateOptions: c.shape({
-	          rows: c.number.optional,
-	          cols: c.number.optional
-	        })
-	      },
-	      apiCheckInstance: c
 	    });
 	  }
 	  addTextareaType.$inject = ["formlyConfigProvider", "formlyFoundationApiCheck"];
